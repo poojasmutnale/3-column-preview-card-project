@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-grey: hsl(0, 0%, 95%);
+}
+
+.card-container {
+  background-color: var(--very-light-grey);
+  /* padding: 1.2rem; */
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-container-body {
+  padding: 100px;
+  background-color: var(--transparent-white);
+  height: 90%;
+  width: 90%;
+  max-height: fit-content;
+  box-shadow: 0 0 30px #8a8a8a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+  padding: 40px;
+  text-align: left;
+  max-width:250px;
+  max-height:600px;
+}
+.cards h4 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700px;
+  font-size: 2rem;
+  color: var(--very-light-grey);
+  margin: 20px 0;
+}
+
+.cards p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400px;
+  color: var(--transparent-white);
+  margin-bottom: 60px;
+}
+.cards button {
+  background-color: var(--very-light-grey);
+  padding: 10px;
+  min-height: 30px;
+  min-width: fit-content;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.cards button:hover{
+  box-shadow: 0 0 2px 3px rgb(233, 228, 228);
+}
+.cards button a.btn {
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  margin: 0 10px;
+}
+.sedan-card a {
+  color: var(--bright-orange);
+}
+.suv-card a {
+  color: var(--dark-cyan);
+}
+.luxury-card a {
+  color: var(--very-dark-cyan);
+}
+.sedan-card {
+  background-color: var(--bright-orange);
+  border-radius: 8px 0 0 8px;
+}
+.suv-card {
+  background-color: var(--dark-cyan);
+}
+.luxury-card {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 8px 8px 0;
+}
+/* Media Query */
+@media only screen and (max-width: 850px) {
+  .card-container {
+    padding: 10px;
+    overflow: auto;
+    height:100%;
+    width:100%;
+  }
+  .card-container-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    height:80%;
+    width:80%;
+    overflow: auto;
+  }
+  .cards {
+    padding: 30px;
+    text-align: left;
+    width:auto;
+    height:auto;
+  }
+  .cards h4 {
+    font-weight: 600px;
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .cards p {
+    font-size: 1rem;
+    font-weight: 400px;
+    margin-bottom: 30px;
+  }
+  .cards button {
+    padding: 5px;
+    min-height: 20px;
+    min-width: fit-content;
+    border: none;
+    border-radius: 20px;
+  }
+  .cards button a.btn {
+    margin: 0 5px;
+  }
+  .sedan-card {
+    border-radius: 8px 8px 0 0;
+  }
+  .luxury-card {
+    border-radius: 0 0 8px 8px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card-container {
+    padding: 5px;
+    overflow: auto;
+    height:auto;
+    width:auto;
+  }
+  .card-container-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    height:80%;
+    width:auto;
+    overflow: auto;
+  }
+  .cards {
+    padding: 30px;
+    text-align: left;
+    width:auto;
+    height:auto;
+  }
+  .cards h4 {
+    font-weight: 500px;
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  .cards p {
+    font-size: 0.8rem;
+    font-weight: 200px;
+    margin-bottom: 30px;
+  }
+  .cards button {
+    padding: 5px;
+    min-height: 20px;
+    min-width: fit-content;
+    border: none;
+    border-radius: 20px;
+  }
+  .cards button a.btn {
+    margin: 0 5px;
+  }
+  .sedan-card {
+    border-radius: 8px 8px 0 0;
+  }
+  .luxury-card {
+    border-radius: 0 0 8px 8px;
+  }
+}
